@@ -286,69 +286,6 @@
       flex-shrink: 0;
     }
 
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    label {
-      display: block;
-      font-size: 11px;
-      font-weight: 500;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-    }
-
-    input[type="text"],
-    input[type="number"],
-    select {
-      width: 100%;
-      background: var(--surface2);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      border-radius: 12px;
-      padding: 15px 16px;
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      outline: none;
-      appearance: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    input[type="text"]:focus,
-    input[type="number"]:focus,
-    select:focus {
-      border-color: var(--orange);
-      box-shadow: 0 0 0 3px var(--orange-glow);
-    }
-
-    input::placeholder {
-      color: var(--text-muted);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .select-wrap {
-      position: relative;
-    }
-
-    .select-wrap::after {
-      content: '▾';
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      pointer-events: none;
-      font-size: 12px;
-    }
-
     .btn-primary {
       width: 100%;
       background: var(--orange);
@@ -404,9 +341,7 @@
     }
 
     @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
+      to { transform: rotate(360deg); }
     }
 
     .processing-title {
@@ -466,13 +401,8 @@
       transition: color 0.3s;
     }
 
-    .step-item.active {
-      color: var(--text);
-    }
-
-    .step-item.done {
-      color: var(--green);
-    }
+    .step-item.active { color: var(--text); }
+    .step-item.done   { color: var(--green); }
 
     .step-dot {
       width: 22px;
@@ -501,15 +431,8 @@
     }
 
     @keyframes pulse-dot {
-
-      0%,
-      100% {
-        box-shadow: 0 0 0 0 rgba(240, 58, 23, 0.4);
-      }
-
-      50% {
-        box-shadow: 0 0 0 5px rgba(240, 58, 23, 0);
-      }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(240, 58, 23, 0.4); }
+      50%       { box-shadow: 0 0 0 5px rgba(240, 58, 23, 0); }
     }
 
     /* ── SUCCESS SCREEN ── */
@@ -524,15 +447,8 @@
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0);    }
     }
 
     .success-icon {
@@ -548,15 +464,8 @@
     }
 
     @keyframes popIn {
-      from {
-        transform: scale(0);
-        opacity: 0;
-      }
-
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
+      from { transform: scale(0); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
     }
 
     .success-check {
@@ -566,15 +475,8 @@
     }
 
     @keyframes checkIn {
-      from {
-        opacity: 0;
-        transform: scale(0.4);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      from { opacity: 0; transform: scale(0.4); }
+      to   { opacity: 1; transform: scale(1);   }
     }
 
     .success-title {
@@ -640,9 +542,7 @@
       box-shadow: 0 4px 24px rgba(34, 197, 94, 0.35);
     }
 
-    .btn-download:active {
-      transform: scale(0.97);
-    }
+    .btn-download:active { transform: scale(0.97); }
 
     .divider {
       display: flex;
@@ -711,15 +611,8 @@
     }
 
     @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(60px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(60px); }
+      to   { opacity: 1; transform: translateY(0);    }
     }
 
     .banner-icon {
@@ -731,15 +624,9 @@
       object-fit: cover;
     }
 
-    .banner-text {
-      flex: 1;
-      min-width: 0;
-    }
+    .banner-text { flex: 1; min-width: 0; }
 
-    .banner-title {
-      font-size: 13px;
-      font-weight: 600;
-    }
+    .banner-title { font-size: 13px; font-weight: 600; }
 
     .banner-sub {
       font-size: 11px;
@@ -843,10 +730,7 @@
             <div class="step-dot">2</div><span>Calculando distâncias e otimizando rotas</span>
           </div>
           <div class="step-item" id="step-3">
-            <div class="step-dot">3</div><span>Aplicando restrições e veículos</span>
-          </div>
-          <div class="step-item" id="step-4">
-            <div class="step-dot">4</div><span>Gerando planilha de saída</span>
+            <div class="step-dot">3</div><span>Gerando planilha de saída</span>
           </div>
         </div>
       </div>
@@ -868,8 +752,8 @@
             <div class="stat-label">Pacotes</div>
           </div>
           <div class="stat-box">
-            <div class="stat-num" id="stat-tempo">—</div>
-            <div class="stat-label">Segundos</div>
+            <div class="stat-num" id="stat-sem-ordem">—</div>
+            <div class="stat-label">Sem Ordem</div>
           </div>
         </div>
         <button class="btn-download" onclick="downloadFile()">⬇&nbsp; Baixar Planilha Processada</button>
@@ -901,7 +785,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script>
-    // Registra o Service Worker para funcionar offline
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
@@ -979,11 +862,10 @@
     }
 
     function transformRows(rows) {
-      const sequenced = rows.filter(r => r['Sequence'] !== '-' && r['Sequence'] != null && r['Stop'] !== '-');
+      const sequenced   = rows.filter(r => r['Sequence'] !== '-' && r['Sequence'] != null && r['Stop'] !== '-');
       const unsequenced = rows.filter(r => r['Sequence'] === '-' || r['Stop'] === '-');
       const maxSeq = Math.max(...sequenced.map(r => Number(r['Sequence'])));
 
-      // Group by [Stop, baseAddress]
       const groups = new Map();
       const order = [];
       for (const r of sequenced) {
@@ -995,13 +877,11 @@
 
       const out = [];
 
-      // Unsequenced first
       unsequenced.forEach((r, i) => {
         const [base, line2] = splitAddr(r['Destination Address']);
         out.push({ 'AT ID': r['AT ID'], 'Destination Address': expandAddress(base), 'Bairro': r['Bairro'], 'City': r['City'], 'Zipcode/Postal code': r['Zipcode/Postal code'], 'Latitude': r['Latitude'], 'Longitude': r['Longitude'], 'Address Line 2': line2 || null, 'Pacotes na Parada': `${maxSeq + i + 1} (+${i + 1})` });
       });
 
-      // Sequenced sorted by Stop
       [...order].sort((a, b) => groups.get(a).stop - groups.get(b).stop).forEach(key => {
         const g = groups.get(key);
         const f = g.first;
@@ -1009,15 +889,16 @@
         out.push({ 'AT ID': f['AT ID'], 'Destination Address': expandAddress(g.base), 'Bairro': f['Bairro'], 'City': f['City'], 'Zipcode/Postal code': f['Zipcode/Postal code'], 'Latitude': f['Latitude'], 'Longitude': f['Longitude'], 'Address Line 2': line2 || null, 'Pacotes na Parada': g.rows.map(r => String(r['Sequence'])).join(', ') });
       });
 
-      return out;
+      // CHANGED: return unsequenced count alongside output rows
+      return { out, unsequencedCount: unsequenced.length };
     }
 
     // ── Processing flow ──
+    // CHANGED: 3 steps instead of 4 (removed "Aplicando restrições e veículos")
     const steps = [
-      { id: 'step-1', pct: 20 },
-      { id: 'step-2', pct: 55 },
-      { id: 'step-3', pct: 85 },
-      { id: 'step-4', pct: 100 },
+      { id: 'step-1', pct: 25  },
+      { id: 'step-2', pct: 65  },
+      { id: 'step-3', pct: 100 },
     ];
     let startTime;
 
@@ -1040,23 +921,24 @@
             activateStep(1);
             animateProgress(steps[1].pct, () => setTimeout(() => {
               activateStep(2);
-              const transformed = transformRows(rows);
-              animateProgress(steps[2].pct, () => setTimeout(() => {
-                activateStep(3);
-                const wbOut = XLSX.utils.book_new();
-                const wsOut = XLSX.utils.json_to_sheet(transformed, {
-                  header: ['AT ID', 'Destination Address', 'Bairro', 'City', 'Zipcode/Postal code', 'Latitude', 'Longitude', 'Address Line 2', 'Pacotes na Parada']
-                });
-                XLSX.utils.book_append_sheet(wbOut, wsOut, 'Planilha Processada');
-                processedWB = wbOut;
 
-                const totalPacotes = transformed.reduce((acc, r) => acc + String(r['Pacotes na Parada']).split(',').length, 0);
+              // CHANGED: destructure to get unsequencedCount
+              const { out: transformed, unsequencedCount } = transformRows(rows);
 
-                animateProgress(steps[3].pct, () => {
-                  markDone(3);
-                  setTimeout(() => showSuccess(transformed.length, totalPacotes), 500);
-                });
-              }, 350));
+              const wbOut = XLSX.utils.book_new();
+              const wsOut = XLSX.utils.json_to_sheet(transformed, {
+                header: ['AT ID', 'Destination Address', 'Bairro', 'City', 'Zipcode/Postal code', 'Latitude', 'Longitude', 'Address Line 2', 'Pacotes na Parada']
+              });
+              XLSX.utils.book_append_sheet(wbOut, wsOut, 'Planilha Processada');
+              processedWB = wbOut;
+
+              const totalPacotes = transformed.reduce((acc, r) => acc + String(r['Pacotes na Parada']).split(',').length, 0);
+
+              animateProgress(steps[2].pct, () => {
+                markDone(2);
+                // CHANGED: pass unsequencedCount to showSuccess
+                setTimeout(() => showSuccess(transformed.length, totalPacotes, unsequencedCount), 500);
+              });
             }, 350));
           }, 350));
         } catch (err) {
@@ -1086,13 +968,13 @@
       })(start);
     }
 
-    function showSuccess(paradas, pacotes) {
+    // CHANGED: added semOrdem parameter, removed elapsed time
+    function showSuccess(paradas, pacotes, semOrdem) {
       document.getElementById('processing-screen').style.display = 'none';
       document.getElementById('success-screen').style.display = 'flex';
-      const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-      document.getElementById('stat-rotas').textContent = paradas;
+      document.getElementById('stat-rotas').textContent    = paradas;
       document.getElementById('stat-veiculos').textContent = pacotes;
-      document.getElementById('stat-tempo').textContent = elapsed;
+      document.getElementById('stat-sem-ordem').textContent = semOrdem;
     }
 
     function downloadFile() {
